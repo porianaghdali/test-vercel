@@ -10,20 +10,20 @@
   
   const convertToJalali = (date) => moment(date).format("jYYYY/jMM/jDD");
   
-  export async function generateStaticParams() {
-    const res = await fetch(
-      "https://admin.hesnical.com/wp-json/wp/v2/posts?_fields=slug&categories=1&per_page=100",
-      { next: { revalidate: 180 } }
-    );
+  // export async function generateStaticParams() {
+  //   const res = await fetch(
+  //     "https://admin.hesnical.com/wp-json/wp/v2/posts?_fields=slug&categories=1&per_page=100",
+  //     { next: { revalidate: 180 } }
+  //   );
   
-    if (!res.ok) return [];
+  //   if (!res.ok) return [];
   
-    const posts = await res.json();
+  //   const posts = await res.json();
   
-    return posts.map((post) => ({
-      blogId: post.slug,
-    }));
-  }
+  //   return posts.map((post) => ({
+  //     blogId: post.slug,
+  //   }));
+  // }
   
   export async function generateMetadata() {
     return {
