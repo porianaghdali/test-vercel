@@ -7,7 +7,8 @@ import Newest from "../../../components/sections/Newest";
 
 
 const Analyse = async() => {
-  return (
+  return ( 
+    
     <>
       <div className="px-[6%]">
         <Header
