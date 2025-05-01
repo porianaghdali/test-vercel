@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-ravifanum: var(--font-ravifanum);
+  --font-raavi: var(--font-raavi);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+
+button {
+  cursor: pointer;
+}
+
+
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.swiper-pagination-bullet-active{
+  background: #120c3c !important
+}
+
+
+
+.SwiperNewsSlider .swiper-button-next:after,.SwiperNewsSlider .swiper-button-prev:after {
+  content: "next";
+  font-size: 18px;
+  color: #414651;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 44px;
+  font-weight: 700
+}
+
+/* .hero-bg:before {
+  content: "aaa";
+  position: absolute;
+  width: 91px;
+  height: 94px;
+  top: 0;
+  right: 0;
+  background: red;
+} */
+
+.z-100{
+  z-index: 10000 !important;
+}
+
+.custom-bullet {
+  @apply w-[13px] h-[8px] bg-[#E9EAEB] inline-block rounded-full mx-1 transition-all cursor-pointer;
+}
+
+.custom-bullet-active {
+  @apply bg-[#8658D7];
+}
+table tr {
+  background-color: #f4f4f4; /* رنگ پس‌زمینه پیش‌فرض برای تمام ردیف‌ها */
+}
+
+table tr:nth-child(odd) {
+  background-color: #f9f9f9; /* رنگ پس‌زمینه برای ردیف‌های فرد */
+}
+
+table tr:nth-child(even) {
+  background-color: #e9e9e9; /* رنگ پس‌زمینه برای ردیف‌های زوج */
+}
+
+table tr:hover {
+  background-color: #d1d1d1; /* رنگ پس‌زمینه هنگام هاور روی ردیف */
+}
+
+
